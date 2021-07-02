@@ -1,29 +1,34 @@
 package beans;
 
+import java.io.Serializable;
 import java.util.Date;
 
-import enums.Gender;
-import enums.Role;
+public class User implements Serializable {
 
-public class User {
-
-	private int id;
+	private static final long serialVersionUID = 6339439741855785576L;
+	
 	private String username;
 	private String password;
 	private String name;
 	private String surname;
-	private Gender gender;
+	private String gender;
 	private Date dateOfBirth;
-	private Role role;
+	private String role;
+	private boolean blocked = false;
 
-	public int getId() {
-		return id;
+	public User() {
 	}
 
-	public void setId(int id) {
-		this.id = id;
+	public User(String username, String password, String name, String surname, String gender, Date dateOfBirth) {
+		super();
+		this.username = username;
+		this.password = password;
+		this.name = name;
+		this.surname = surname;
+		this.gender = gender;
+		this.dateOfBirth = dateOfBirth;
 	}
-
+	
 	public String getUsername() {
 		return username;
 	}
@@ -56,11 +61,11 @@ public class User {
 		this.surname = surname;
 	}
 
-	public Gender getGender() {
+	public String getGender() {
 		return gender;
 	}
 
-	public void setGender(Gender gender) {
+	public void setGender(String gender) {
 		this.gender = gender;
 	}
 
@@ -72,12 +77,20 @@ public class User {
 		this.dateOfBirth = dateOfBirth;
 	}
 
-	public Role getRole() {
+	public String getRole() {
 		return role;
 	}
 
-	public void setRole(Role role) {
+	public void setRole(String role) {
 		this.role = role;
+	}
+
+	public boolean isBlocked() {
+		return blocked;
+	}
+
+	public void setBlocked(boolean blocked) {
+		this.blocked = blocked;
 	}
 
 }

@@ -4,121 +4,131 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" />
-    <link rel="stylesheet" href="css/index.css" />
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-
-    <script src="js/jquery-3.3.1.min.js"></script>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
-    <script src="js/auth.js"></script>
-
-    <script type="text/javascript"
-        src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-validator/0.5.3/js/bootstrapValidator.min.js"></script>
 
     <title>Delivery 4 U</title>
 </head>
 
 <body>
-    <nav class="navbar navbar-inverse">
-        <div class="container-fluid">
-            <div class="navbar-header">
-                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
-                    <span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span>
-                </button>
-                <a class="navbar-brand" href="index.html"><i class="fa fa-truck"></i> Delivery 4 U</a>
-            </div>
-            <div class="collapse navbar-collapse" id="myNavbar">
-                <ul class="nav navbar-nav navbar-right">
-                    <li><a href="register.html"><i class="fa fa-user"></i>
-                            Registracija</a></li>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light py-4">
+        <a class="navbar-brand" href="index.html"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                fill="currentColor" class="bi bi-truck" viewBox="0 0 16 16">
+                <path
+                    d="M0 3.5A1.5 1.5 0 0 1 1.5 2h9A1.5 1.5 0 0 1 12 3.5V5h1.02a1.5 1.5 0 0 1 1.17.563l1.481 1.85a1.5 1.5 0 0 1 .329.938V10.5a1.5 1.5 0 0 1-1.5 1.5H14a2 2 0 1 1-4 0H5a2 2 0 1 1-3.998-.085A1.5 1.5 0 0 1 0 10.5v-7zm1.294 7.456A1.999 1.999 0 0 1 4.732 11h5.536a2.01 2.01 0 0 1 .732-.732V3.5a.5.5 0 0 0-.5-.5h-9a.5.5 0 0 0-.5.5v7a.5.5 0 0 0 .294.456zM12 10a2 2 0 0 1 1.732 1h.768a.5.5 0 0 0 .5-.5V8.35a.5.5 0 0 0-.11-.312l-1.48-1.85A.5.5 0 0 0 13.02 6H12v4zm-9 1a1 1 0 1 0 0 2 1 1 0 0 0 0-2zm9 0a1 1 0 1 0 0 2 1 1 0 0 0 0-2z" />
+            </svg> Delivery 4 U</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
 
-                    <li><a href="login.html"><i class="fa fa-sign-in"></i>
-                            Login</a></li>
-                </ul>
-            </div>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="nav navbar-nav ml-auto" id="nelogovan">
+                <li class="nav-item"><a class="nav-link" href="register.html"><svg xmlns="http://www.w3.org/2000/svg"
+                            width="16" height="16" fill="currentColor" class="bi bi-person" viewBox="0 0 16 16">
+                            <path
+                                d="M8 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm2-3a2 2 0 1 1-4 0 2 2 0 0 1 4 0zm4 8c0 1-1 1-1 1H3s-1 0-1-1 1-4 6-4 6 3 6 4zm-1-.004c-.001-.246-.154-.986-.832-1.664C11.516 10.68 10.289 10 8 10c-2.29 0-3.516.68-4.168 1.332-.678.678-.83 1.418-.832 1.664h10z" />
+                        </svg> Registracija</a></li>
+                <li class="nav-item"><a class="nav-link" href="login.html"><svg xmlns="http://www.w3.org/2000/svg"
+                            width="16" height="16" fill="currentColor" class="bi bi-box-arrow-in-right"
+                            viewBox="0 0 16 16">
+                            <path fill-rule="evenodd"
+                                d="M6 3.5a.5.5 0 0 1 .5-.5h8a.5.5 0 0 1 .5.5v9a.5.5 0 0 1-.5.5h-8a.5.5 0 0 1-.5-.5v-2a.5.5 0 0 0-1 0v2A1.5 1.5 0 0 0 6.5 14h8a1.5 1.5 0 0 0 1.5-1.5v-9A1.5 1.5 0 0 0 14.5 2h-8A1.5 1.5 0 0 0 5 3.5v2a.5.5 0 0 0 1 0v-2z" />
+                            <path fill-rule="evenodd"
+                                d="M11.854 8.354a.5.5 0 0 0 0-.708l-3-3a.5.5 0 1 0-.708.708L10.293 7.5H1.5a.5.5 0 0 0 0 1h8.793l-2.147 2.146a.5.5 0 0 0 .708.708l3-3z" />
+                        </svg> Login</a></li>
+            </ul>
         </div>
     </nav>
 
-    <div class="jumbotron">
-        <div class="container text-center">
-            <h1>Delivery 4 U</h1>
-            <p>Online servis za pretragu i naručivanje jela i pića</p>
+    <div class="container">
+        <div class="d-flex justify-content-center align-items-center min-vh-100">
+            <form id="formRegister" class="form-horizontal col-12" method="POST">
+                <div class="form-group row">
+                    <label class="col-form-label col-sm-4" for="username" style="text-align: right; font-weight: bold;">Username:
+                    </label>
+                    <div class="col-sm-4">
+                        <input type="text" class="form-control" name="usernameRegister" id="usernameRegister"
+                            placeholder="Upišite Vaš username" />
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <label class="col-form-label col-sm-4" for="password" style="text-align: right; font-weight: bold;">Password:
+                    </label>
+                    <div class="col-sm-4">
+                        <input type="password" class="form-control" name="passwordRegister" id="passwordRegister"
+                            placeholder="Upišite Vaš password" />
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <label class="col-form-label col-sm-4" for="confirm" style="text-align: right; font-weight: bold;">Potvrdite
+                        password: </label>
+                    <div class="col-sm-4">
+                        <input type="password" class="form-control" name="confirmRegister" id="confirmRegister"
+                            placeholder="Ponovite unos Vašeg password-a" />
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <label class="col-form-label col-sm-4" for="name" style="text-align: right; font-weight: bold;">Ime: </label>
+                    <div class="col-sm-4">
+                        <input type="text" class="form-control" name="nameRegister" id="nameRegister"
+                            placeholder="Unesite Vaše ime" />
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <label class="col-form-label col-sm-4" for="surname" style="text-align: right; font-weight: bold;">Prezime:
+                    </label>
+                    <div class="col-sm-4">
+                        <input type="text" class="form-control" name="surnameRegister" id="surnameRegister"
+                            placeholder="Unesite Vaše prezime" />
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <label class="col-form-label col-sm-4" for="pol" style="text-align: right; font-weight: bold;">Pol: </label>
+                    <div class="col-sm-4">
+                        <select class="form-control" name="genderRegister" id="genderRegister">
+                            <option value="">Izaberite pol</option>
+                            <option value="MALE">muški</option>
+                            <option value="FEMALE">ženski</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="offset-sm-4 col-sm-4">
+                        <button type="submit" class="btn btn-primary btn-block">Registracija</button>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="offset-sm-4 col-sm-4">
+                        <a href="./index.html" type="submit" id="cancelButton"
+                            class="btn btn-info btn-block">Odustani</a>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="offset-sm-4 col-sm-4 text-center">
+                        <a href="login.html">Već imate nalog? Ulogujte se ovde.</a>
+                    </div>
+                </div>
+            </form>
         </div>
     </div>
 
-    <div class="container">
-        <h2 style="text-align: center">Registracija</h2>
-        <br />
-        <form id="formRegister" class="form-horizontal" method="POST">
-            <div class="form-group">
-                <label class="control-label col-sm-4" for="username">Username:
-                </label>
-                <div class="col-sm-4">
-                    <input type="text" class="form-control" name="usernameRegister" id="usernameRegister"
-                        placeholder="Upišite Vaš username" />
-                </div>
-            </div>
-            <div class="form-group">
-                <label class="control-label col-sm-4" for="password">Password:
-                </label>
-                <div class="col-sm-4">
-                    <input type="password" class="form-control" name="passwordRegister" id="passwordRegister"
-                        placeholder="Upišite Vaš password" />
-                </div>
-            </div>
-            <div class="form-group">
-                <label class="control-label col-sm-4" for="confirm">Potvrdite
-                    password: </label>
-                <div class="col-sm-4">
-                    <input type="password" class="form-control" name="confirmRegister" id="confirmRegister"
-                        placeholder="Ponovite unos Vašeg password-a" />
-                </div>
-            </div>
-            <div class="form-group">
-                <label class="control-label col-sm-4" for="name">Ime: </label>
-                <div class="col-sm-4">
-                    <input type="text" class="form-control" name="nameRegister" id="nameRegister"
-                        placeholder="Unesite Vaše ime" />
-                </div>
-            </div>
-            <div class="form-group">
-                <label class="control-label col-sm-4" for="surname">Prezime:
-                </label>
-                <div class="col-sm-4">
-                    <input type="text" class="form-control" name="surnameRegister" id="surnameRegister"
-                        placeholder="Unesite Vaše prezime" />
-                </div>
-            </div>
-            <div class="form-group">
-                <label class="control-label col-sm-4" for="pol">Pol: </label>
-                <div class="col-sm-4">
-                    <select class="form-control" name="genderRegister" id="genderRegister">
-                        <option value="">Izaberite pol</option>
-                        <option value="MALE">muški</option>
-                        <option value="FEMALE">ženski</option>
-                    </select>
-                </div>
-            </div>
-            <div class="form-group">
-                <div class="col-sm-offset-4 col-sm-4">
-                    <button type="submit" class="btn btn-primary btn-block">Registracija</button>
-                </div>
-            </div>
-        </form>
-        <form class="form-horizontal">
-            <div class="form-group">
-                <div class="col-sm-offset-4 col-sm-4">
-                    <a href="./index.html" type="submit" id="cancelButton" class="btn btn-info btn-block">Odustani</a>
-                </div>
-            </div>
-            <div class="col-sm-offset-4 col-sm-4 text-center">
-                <a href="login.html">Već imate nalog? Ulogujte se ovde.</a>
-            </div>
-        </form>
-    </div>
+    <!--SCRIPTS-->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script>
+    <script src="js/index.js"></script>
 </body>
 
 </html>
