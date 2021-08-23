@@ -1,25 +1,24 @@
 package beans;
 
 import java.io.Serializable;
-import java.util.Date;
 
 public class User implements Serializable {
 
 	private static final long serialVersionUID = 6339439741855785576L;
-	
+
 	private String username;
 	private String password;
 	private String name;
 	private String surname;
 	private String gender;
-	private Date dateOfBirth;
+	private String dateOfBirth;
 	private String role;
 	private boolean blocked = false;
 
 	public User() {
 	}
 
-	public User(String username, String password, String name, String surname, String gender, Date dateOfBirth) {
+	public User(String username, String password, String name, String surname, String gender, String dateOfBirth) {
 		super();
 		this.username = username;
 		this.password = password;
@@ -28,7 +27,7 @@ public class User implements Serializable {
 		this.gender = gender;
 		this.dateOfBirth = dateOfBirth;
 	}
-	
+
 	public String getUsername() {
 		return username;
 	}
@@ -69,11 +68,11 @@ public class User implements Serializable {
 		this.gender = gender;
 	}
 
-	public Date getDateOfBirth() {
+	public String getDateOfBirth() {
 		return dateOfBirth;
 	}
 
-	public void setDateOfBirth(Date dateOfBirth) {
+	public void setDateOfBirth(String dateOfBirth) {
 		this.dateOfBirth = dateOfBirth;
 	}
 
