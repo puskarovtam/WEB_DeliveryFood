@@ -1,9 +1,11 @@
-{
-	"username": "admin",
-	"password": "admin",
-	"name": "Tamara",
-	"surname": "Puskarov",
-	"gender": "FEMALE",
-	"dateOfBirth": "",
-	"role": "ADMIN"
-}
+[
+	{
+		"username": "admin",
+		"password": "admin",
+		"name": "Tamara",
+		"surname": "Puskarov",
+		"gender": "FEMALE",
+		"dateOfBirth": "1989-03-20",
+		"role": "ADMIN"
+	}
+]

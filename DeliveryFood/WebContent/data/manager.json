@@ -1,1 +1,20 @@
-{}
+[
+	{
+		"username": "ivona",
+		"password": "manager",
+		"name": "Ivona",
+		"surname": "Filipovic",
+		"gender": "FEMALE",
+		"dateOfBirth": "1989-02-20",
+		"role": "MANAGER"
+	},
+		{
+		"username": "ivana",
+		"password": "manager",
+		"name": "Ivana",
+		"surname": "Ivanovic",
+		"gender": "FEMALE",
+		"dateOfBirth": "1966-08-23",
+		"role": "MANAGER"
+	}
+]
