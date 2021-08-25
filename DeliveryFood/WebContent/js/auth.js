@@ -61,6 +61,10 @@ $(document).ready(function () {
 				}
 			}
 		}
+	}).on('success.form.bv', function(e){
+		console.log("Ulazim u success.form.bv")
+		e.preventDefault();
+		registrovanje();
 	});
 });
 
@@ -97,7 +101,7 @@ function logovanje() {
 	console.log("Ulazim u logovanje");
 
 	$.post({
-		url: 'rest/auth/login',
+		url: 'rest/user/login',
 		contentType: 'application/json',
 		data: JSON.stringify({
 			"username": username,
@@ -105,12 +109,46 @@ function logovanje() {
 		}),
 		success: function () {
 			console.log("Usla sam u logovanje");
-			window.location = './index.html';
-			console.log("Idem na stranu index.html");
+			window.location = './homepage.html';
+			console.log("Idem na stranu homepage.html");
 		},
 		error: function () {
 			console.log("Logovanje je neuspešno.");
 		}
 	});
 	$('#formLogin').bootstrapValidator('defaultSubmit');
+}
+
+function registrovanje() {
+	let username = $('#usernameRegister').val();
+	let password = $('#passwordRegister').val();
+	let confirm = $('#confirmRegister').val();
+	let name = $('#nameRegister').val();
+	let surname = $('#surnameRegister').val();
+	let gender = $('#genderRegister').val();
+	
+	console.log("Ulazim u registrovanje");
+
+	$.post({
+		url: 'rest/user/register',
+		contentType: 'application/json',
+		data: JSON.stringify({
+			"username": username,
+			"password": password,
+			"confirm" : confirm,
+			"name" : name,
+			"surname" : surname,
+			"gender" : gender
+		}),
+		success: function (data) {
+			console.log(JSON.stringify(data));
+			console.log("Usla sam u registrovanje");
+			window.location = './login.html';
+			console.log("Idem na stranu login.html");
+		},
+		error: function () {
+			console.log("Registrovanje je neuspešno.");
+		}
+	});
+	$('#formRegister').bootstrapValidator('defaultSubmit'); 
 }
