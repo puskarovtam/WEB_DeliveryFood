@@ -50,11 +50,20 @@
 		<div class="d-flex justify-content-center align-items-center min-vh-100">
 			<form id="formRegister" class="form-horizontal col-12">
 				<div class="form-group row">
+					<label for="" class="col-sm-4 col-form-label" style="text-align: right; font-weight: bold;"></label>
+					<div class="col-sm-4">
+						<p id="error"></p>
+						<p id="success"></p>
+					</div>
+				</div>
+				<div class="form-group row">
 					<label class="col-form-label col-sm-4" for="username"
 						style="text-align: right; font-weight: bold;">Username: </label>
 					<div class="col-sm-4">
 						<input type="text" class="form-control" name="usernameRegister" id="usernameRegister"
 							placeholder="Upišite Vaš username" />
+						<p id="emptyUsername"></p>
+						<p id="lengthUsername"></p>
 					</div>
 				</div>
 				<div class="form-group row">
@@ -63,6 +72,8 @@
 					<div class="col-sm-4">
 						<input type="password" class="form-control" name="passwordRegister" id="passwordRegister"
 							placeholder="Upišite Vaš password" />
+						<p id="emptyPassword"></p>
+						<p id="lengthPassword"></p>
 					</div>
 				</div>
 				<div class="form-group row">
@@ -72,6 +83,8 @@
 					<div class="col-sm-4">
 						<input type="password" class="form-control" name="confirmRegister" id="confirmRegister"
 							placeholder="Ponovite unos Vašeg password-a" />
+						<p id="emptyConfirm"></p>
+						<p id="matchPassword"></p>
 					</div>
 				</div>
 				<div class="form-group row">
@@ -80,6 +93,8 @@
 					<div class="col-sm-4">
 						<input type="text" class="form-control" name="nameRegister" id="nameRegister"
 							placeholder="Unesite Vaše ime" />
+						<p id="emptyName"></p>
+						<p id="lengthName"></p>
 					</div>
 				</div>
 				<div class="form-group row">
@@ -88,6 +103,8 @@
 					<div class="col-sm-4">
 						<input type="text" class="form-control" name="surnameRegister" id="surnameRegister"
 							placeholder="Unesite Vaše prezime" />
+						<p id="emptySurname"></p>
+						<p id="lengthSurname"></p>
 					</div>
 				</div>
 				<div class="form-group row">
@@ -99,6 +116,7 @@
 							<option value="MALE">muški</option>
 							<option value="FEMALE">ženski</option>
 						</select>
+						<p id="emptyGender"></p>
 					</div>
 				</div>
 				<div class="form-group">
@@ -122,18 +140,17 @@
 	</div>
 
 	<!--SCRIPTS-->
-	<script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+	<script src="https://code.jquery.com/jquery-3.3.1.min.js"
+		integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
 		integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
 		crossorigin="anonymous"></script>
 	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
 		integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
 		crossorigin="anonymous"></script>
-	<script type="text/javascript"
-		src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-validator/0.5.3/js/bootstrapValidator.min.js"></script>
 
 	<script src="js/index.js"></script>
-	<script src="js/auth.js"></script>
+	<script src="js/register.js"></script>
 </body>
 
 </html>
