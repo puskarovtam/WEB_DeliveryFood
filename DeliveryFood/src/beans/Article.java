@@ -4,8 +4,8 @@ import enums.TypeOfArticle;
 
 public class Article {
 
-	private int id;
-	private int restaurantId;
+	private Long id;
+	private Long restaurantId;
 	private String name;
 	private TypeOfArticle type;
 	private int price;
@@ -13,19 +13,19 @@ public class Article {
 	private String description;
 	private String image;
 
-	public int getId() {
+	public Long getId() {
 		return id;
 	}
 
-	public void setId(int id) {
+	public void setId(Long id) {
 		this.id = id;
 	}
 
-	public int getRestaurantId() {
+	public Long getRestaurantId() {
 		return restaurantId;
 	}
 
-	public void setRestaurantId(int restaurantId) {
+	public void setRestaurantId(Long restaurantId) {
 		this.restaurantId = restaurantId;
 	}
 
