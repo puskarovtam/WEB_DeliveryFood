@@ -40,7 +40,7 @@ public class ArticleDAO {
 		this.contextPath = contextPath;
 	}
 
-	private void loadArticles() {
+	public void loadArticles() {
 		articles.clear();
 
 		ObjectMapper objectMapper = new ObjectMapper();

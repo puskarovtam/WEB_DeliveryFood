@@ -2,15 +2,13 @@ package beans;
 
 import java.util.Date;
 
-import enums.OrderStatus;
-
 public class Order {
 
 	private int id;
 	private Date date;
 	private int price;
 	private int buyerId;
-	private OrderStatus status;
+	private String status;
 
 	public int getId() {
 		return id;
@@ -44,11 +42,11 @@ public class Order {
 		this.buyerId = buyerId;
 	}
 
-	public OrderStatus getStatus() {
+	public String getStatus() {
 		return status;
 	}
 
-	public void setStatus(OrderStatus status) {
+	public void setStatus(String status) {
 		this.status = status;
 	}
 

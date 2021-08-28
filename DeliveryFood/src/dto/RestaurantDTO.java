@@ -1,42 +1,31 @@
-package beans;
+package dto;
 
 import java.util.ArrayList;
 
-public class Restaurant {
+import beans.Location;
 
-	private Long id;
+public class RestaurantDTO {
+
 	private String name;
 	private String type;
 	private Location location;
 	private String logo;
-	private boolean status = true;
-	private boolean deleted = false;
-	private ArrayList<Article> articles = new ArrayList<Article>();
+	private ArrayList<Long> articles;
 	private String manager;
 
-	public Restaurant() {
+	public RestaurantDTO() {
+		super();
 	}
 
-	public Restaurant(Long id, String name, String type, Location location, String logo, boolean status,
-			boolean deleted, ArrayList<Article> articles, String manager) {
+	public RestaurantDTO(String name, String type, Location location, String logo, ArrayList<Long> articles,
+			String manager) {
 		super();
-		this.id = id;
 		this.name = name;
 		this.type = type;
 		this.location = location;
 		this.logo = logo;
-		this.status = status;
-		this.deleted = deleted;
 		this.articles = articles;
 		this.manager = manager;
-	}
-
-	public Long getId() {
-		return id;
-	}
-
-	public void setId(Long id) {
-		this.id = id;
 	}
 
 	public String getName() {
@@ -71,27 +60,11 @@ public class Restaurant {
 		this.logo = logo;
 	}
 
-	public boolean isStatus() {
-		return status;
-	}
-
-	public void setStatus(boolean status) {
-		this.status = status;
-	}
-
-	public boolean isDeleted() {
-		return deleted;
-	}
-
-	public void setDeleted(boolean deleted) {
-		this.deleted = deleted;
-	}
-
-	public ArrayList<Article> getArticles() {
+	public ArrayList<Long> getArticles() {
 		return articles;
 	}
 
-	public void setArticles(ArrayList<Article> articles) {
+	public void setArticles(ArrayList<Long> articles) {
 		this.articles = articles;
 	}
 

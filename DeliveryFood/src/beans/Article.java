@@ -1,13 +1,10 @@
 package beans;
 
-import enums.TypeOfArticle;
-
 public class Article {
 
 	private Long id;
-	private Long restaurantId;
 	private String name;
-	private TypeOfArticle type;
+	private String type;
 	private int price;
 	private int amount;
 	private String description;
@@ -21,14 +18,6 @@ public class Article {
 		this.id = id;
 	}
 
-	public Long getRestaurantId() {
-		return restaurantId;
-	}
-
-	public void setRestaurantId(Long restaurantId) {
-		this.restaurantId = restaurantId;
-	}
-
 	public String getName() {
 		return name;
 	}
@@ -37,11 +26,11 @@ public class Article {
 		this.name = name;
 	}
 
-	public TypeOfArticle getType() {
+	public String getType() {
 		return type;
 	}
 
-	public void setType(TypeOfArticle type) {
+	public void setType(String type) {
 		this.type = type;
 	}
 

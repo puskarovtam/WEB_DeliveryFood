@@ -2,19 +2,22 @@ package beans;
 
 public class Location {
 
-	private int id;
 	private String address;
 	private String city;
 	private String postalCode;
 	private double latitude;
 	private double longitude;
 
-	public int getId() {
-		return id;
+	public Location() {
 	}
 
-	public void setId(int id) {
-		this.id = id;
+	public Location(String address, String city, String postalCode, double latitude, double longitude) {
+		super();
+		this.address = address;
+		this.city = city;
+		this.postalCode = postalCode;
+		this.latitude = latitude;
+		this.longitude = longitude;
 	}
 
 	public String getAddress() {
