@@ -70,7 +70,7 @@ public class UserService {
 			return null;
 		}
 		ctx.setAttribute("userDAO", users);
-		request.getSession().setAttribute("loggedUser", u);
+		request.getSession().setAttribute("loggedIn", u);
 		return u;
 	}
 
@@ -79,7 +79,8 @@ public class UserService {
 	@Consumes(MediaType.APPLICATION_JSON)
 	@Produces(MediaType.APPLICATION_JSON)
 	public User getLoggedUser(@Context HttpServletRequest request) {
-		return (User) request.getSession().getAttribute("loggedUser");
+		User user = (User) request.getSession().getAttribute("loggedIn");
+		return user;
 	}
 
 	@GET
