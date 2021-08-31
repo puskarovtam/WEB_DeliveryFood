@@ -45,11 +45,65 @@
         </div>
     </nav>
 
-
-    <div class="container">
-
+    <br>
+    <!--PRETRAGA RESTORANA-->
+    <div class="container" id="searchRestaurantsDiv">
+        <div class="card">
+            <section id="searchMenu">
+                <div class="container" style="padding-top: 15px;">
+                    <form>
+                        <div class="form-row">
+                            <div class="col-md-3">
+                                <label for="nameSearch"><b>Naziv restorana</b></label>
+                                <input id="nameSearch" type="text" class="form-control" placeholder="Naziv restorana">
+                            </div>
+                            <div class="col-md-3">
+                                <label for="typeSearch"><b>Tip restorana</b></label>
+                                <select class="form-control" id="typeSearch">
+                                    <option value="">Izaberite tip restorana</option>
+                                    <option value="domaci">domaći</option>
+                                    <option value="rostilj">roštilj</option>
+                                    <option value="italijanski">italijanski</option>
+                                    <option value="kineski">kineski</option>
+                                </select>
+                            </div>
+                            <div class="col-md-3">
+                                <label for="locationSearch"><b>Lokacija</b></label>
+                                <input id="locationSearch" type="text" class="form-control" placeholder="Lokacija">
+                            </div>
+                            <div class="col-md-3">
+                                <label for="reviewSearch"><b>Ocena</b></label>
+                                <div class="input-group">
+                                    <input id="minReviewSearch" type="number" class="form-control"
+                                        placeholder="Min. ocena" min=1> <input id="maxReviewSearch" type="number"
+                                        class="form-control" placeholder="Max. ocena">
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                    <p id="errorSearch" style="margin-top: 5px; margin-left: 7px; color: red; font-size: 16px;"></p>
+                    <button id="searchRestaurantsButton" type="button" class="btn btn-success mt-2 mb-2"
+                        style="float: right;" onclick="search()">Pretraga</button>
+                    <button id="clearRestaurantsFilter" type="button" class="btn btn-info mt-2 mb-2 mr-2"
+                        style="float: right;" onclick="clearFilters()">Obriši filtere</button>
+                </div>
+            </section>
+        </div>
     </div>
-
+    <br>
+    <!--PRIKAZ SVIH RESTORANA-->
+    <div class="container" id="restaurantCardDiv">
+        <div class="card" style="width: 18rem;">
+            <img src="images/pizzeriaCiao.png" class="card-img-top" alt="slika">
+            <div class="card-body">
+                <h5 class="card-title"><b>Pizzeria Ciao</b></h5>
+                <h6 class="card-subtitle mb-2 text-muted"><i>italijanski</i></h6>
+                <p class="card-text">Braće Jovandić 1, <br> 21000 Novi Sad</p>
+                <a href="#" class="card-link btn btn-primary">Detalji</a>
+                <a href="#" class="card-link btn btn-primary">Komentari</a>
+            </div>
+        </div>
+    </div>
 
 
     <!--SCRIPTS-->

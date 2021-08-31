@@ -1,0 +1,13 @@
+[
+	{
+		"id": "1",
+		"name": "Ciao Pizzeria",
+		"type": "italijanski",
+		"location": {},
+		"logo" : "images/pizzeriaCiao.png",
+		"status": "true",
+		"deleted": "false",
+		"articles": [],
+		"manager": "ivona"
+	}
+]

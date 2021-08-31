@@ -1,12 +1,20 @@
 $(document).ready(function() {
 	$('#logovan').show();
+	$('#usersTableDiv').hide();
+
+	$("#userInput").on("keyup", function() {
+		var value = $(this).val().toLowerCase();
+		$("#usersTableBody tr").filter(function() {
+			$(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
+		});
+	});
 });
 
-function logout(){
+function logout() {
 	$.get({
 		url: 'rest/user/signOut',
 		contentType: 'application/json',
-		success: function(){
+		success: function() {
 			window.location = './index.html';
 		}
 	});
