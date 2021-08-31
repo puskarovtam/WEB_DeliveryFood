@@ -275,11 +275,8 @@ public class UserDAO {
 			if (user.getUsername().equals(username)) {
 				if (user.getPassword().equals(password)) {
 					return user;
-				} else {
-					return null;
 				}
 			}
-			return null;
 		}
 		return null;
 	}

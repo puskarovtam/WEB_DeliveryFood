@@ -69,7 +69,6 @@ public class UserService {
 		if (u == null) {
 			return null;
 		}
-		ctx.setAttribute("userDAO", users);
 		request.getSession().setAttribute("loggedIn", u);
 		return u;
 	}
