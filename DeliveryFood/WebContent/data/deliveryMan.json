@@ -4,7 +4,7 @@
 		"password": "delivery",
 		"name": "Mladen",
 		"surname": "Bogdanovic",
-		"gender": "MALE",
+		"gender": "muski",
 		"dateOfBirth": "1970-11-03",
 		"role": "DELIVERY MAN"
 	},
@@ -13,7 +13,7 @@
 		"password": "delivery",
 		"name": "Ognjen",
 		"surname": "Kralj",
-		"gender": "MALE",
+		"gender": "muski",
 		"dateOfBirth": "1994-02-22",
 		"role": "DELIVERY MAN"
 	},
@@ -22,7 +22,7 @@
 		"password": "delivery",
 		"name": "Pedja",
 		"surname": "Marjanovic",
-		"gender": "MALE",
+		"gender": "muski",
 		"dateOfBirth": "1970-03-17",
 		"role": "DELIVERY MAN"
 	}

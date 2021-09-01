@@ -152,6 +152,47 @@
         </div>
     </div>
     <br>
+    <div class="container" id="newRestaurant">
+        <form id="formNewRestaurant" class="form-horizontal col-12">
+            <div class="form-group row">
+                <label for="" class="col-sm-4 col-form-label" style="text-align: right; font-weight: bold;"></label>
+                <div class="col-sm-4">
+                    <p id="error"></p>
+                    <p id="success"></p>
+                </div>
+            </div>
+            <div class="form-group row">
+                <label for="name" class="col-sm-4 col-form-label" style="text-align: right; font-weight: bold;">Naziv restorana: </label>
+                <div class="col-sm-4">
+                    <input type="text" class="form-control" name="nameNewRestaurant" id="nameNewRestaurant" placeholder="Upišite naziv restorana" />
+                    <p id="emptyName"></p>
+                </div>
+            </div>
+            <div class="form-group row">
+                <label for="type" class="col-sm-4 col-form-label" style="text-align: right; font-weight: bold;">Tip restorana: </label>
+                <div class="col-sm-4">
+                    <select class="form-control" id="typeNewRestaurant">
+                        <option value="">Izaberite tip restorana</option>
+                        <option value="domaci">domaći</option>
+                        <option value="rostilj">roštilj</option>
+                        <option value="italijanski">italijanski</option>
+                        <option value="kineski">kineski</option>
+                    </select>
+                    <p id="emptyType"></p>
+                </div>
+            </div>
+            <div class="form-group row">
+                <label for="location" class="col-sm-4 col-form-label" style="text-align: right; font-weight: bold;">Lokacija restorana: </label>
+                <div class="col-sm-4">
+                    <input type="text" class="form-control" name="addressNewRestaurant" id="addressNewRestaurant" placeholder="Upišite adresu restorana" />
+                    <input type="text" class="form-control" name="postalCodeNewRestaurant" id="postalCodeNewRestaurant" placeholder="Upišite poštanski broj" />
+                    <input type="text" class="form-control" name="cityNewRestaurant" id="cityNewRestaurant" placeholder="Upišite grad" /> 
+                    <p id="emptyName"></p>
+                </div>
+            </div>
+        </form>
+    </div>
+    <br>
 
     <!--TABELA KORISNIKA-->
     <div class="container" id="usersTableDiv">
@@ -190,6 +231,7 @@
         crossorigin="anonymous"></script>
     <script src="js/homepage.js"></script>
     <script src="js/users.js"></script>
+    <script src="js/search.js"></script>
 </body>
 
 </html>

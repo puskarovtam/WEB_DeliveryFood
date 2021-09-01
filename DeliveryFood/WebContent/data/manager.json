@@ -4,7 +4,7 @@
 		"password": "manager",
 		"name": "Ivona",
 		"surname": "Filipovic",
-		"gender": "FEMALE",
+		"gender": "zenski",
 		"dateOfBirth": "1989-02-20",
 		"role": "MANAGER"
 	},
@@ -13,7 +13,7 @@
 		"password": "manager",
 		"name": "Ivana",
 		"surname": "Ivanovic",
-		"gender": "FEMALE",
+		"gender": "zenski",
 		"dateOfBirth": "1966-08-23",
 		"role": "MANAGER"
 	}
