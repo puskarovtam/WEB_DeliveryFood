@@ -7,7 +7,9 @@ let uloga;
 function getAllUsers() {
     $('#searchRestaurantsDiv').hide();
     $('#restaurantCardDiv').hide();
-
+    $('#newRestaurant').hide();
+    $('#editRestaurant').hide();
+    
     $('#usersTableDiv').show();
     $('#usersTableBody').html();
 
