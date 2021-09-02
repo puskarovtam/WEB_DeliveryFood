@@ -13,12 +13,13 @@ public class Restaurant {
 	private boolean deleted = false;
 	private ArrayList<Article> articles = new ArrayList<Article>();
 	private String manager;
+	private int review;
 
 	public Restaurant() {
 	}
 
 	public Restaurant(Long id, String name, String type, Location location, String logo, boolean status,
-			boolean deleted, ArrayList<Article> articles, String manager) {
+			boolean deleted, ArrayList<Article> articles, String manager, int review) {
 		super();
 		this.id = id;
 		this.name = name;
@@ -29,6 +30,7 @@ public class Restaurant {
 		this.deleted = deleted;
 		this.articles = articles;
 		this.manager = manager;
+		this.review = review;
 	}
 
 	public Long getId() {
@@ -101,6 +103,14 @@ public class Restaurant {
 
 	public void setManager(String manager) {
 		this.manager = manager;
+	}
+
+	public int getReview() {
+		return review;
+	}
+
+	public void setReview(int review) {
+		this.review = review;
 	}
 
 }
