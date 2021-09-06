@@ -84,7 +84,7 @@ public class RestaurantService {
 	}
 
 	@GET
-	@Path("/{id}")
+	@Path("/one/{id}")
 	@Produces(MediaType.APPLICATION_JSON)
 	@Consumes(MediaType.APPLICATION_JSON)
 	public Response getOneRestaurants(@PathParam("id") Long id) {
