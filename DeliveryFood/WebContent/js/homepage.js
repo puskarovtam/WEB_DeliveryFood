@@ -1,7 +1,9 @@
 $(document).ready(function() {
-	$('#logovan').show();
+	$('#noviRestoran').hide();	
+	$('#editRestaurant').hide();
 	$('#usersTableDiv').hide();
-
+	$('#logovan').show();
+	
 	$("#userInput").on("keyup", function() {
 		var value = $(this).val().toLowerCase();
 		$("#usersTableBody tr").filter(function() {

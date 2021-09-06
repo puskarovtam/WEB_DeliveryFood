@@ -5,9 +5,9 @@ let nadimak;
 let uloga;
 
 function getAllUsers() {
+	$('#noviRestoran').hide();
     $('#searchRestaurantsDiv').hide();
     $('#restaurantCardDiv').hide();
-    $('#newRestaurant').hide();
     $('#editRestaurant').hide();
     
     $('#usersTableDiv').show();
