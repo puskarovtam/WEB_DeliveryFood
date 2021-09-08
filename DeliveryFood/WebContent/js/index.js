@@ -30,20 +30,20 @@ function restaurantCard(restaurant) {
 	const adresa = document.createElement('p');
 	adresa.className = "card-text";
 	adresa.innerHTML = restaurant.location.address;
-	
+
 	const grad = document.createElement('p');
 	grad.className = "card-text";
-	grad.innerHTML += restaurant.location.postalCode +" "+ restaurant.location.city;
+	grad.innerHTML += restaurant.location.postalCode + " " + restaurant.location.city;
 
 	const detalji = document.createElement('a');
 	detalji.className = "card-link btn btn-primary";
 	detalji.innerHTML = 'Detalji';
-	detalji.href = "";
+	detalji.onclick = function () { detailsModal(restaurant); };
 
 	const komentari = document.createElement('a');
 	komentari.className = "card-link btn btn-primary";
 	komentari.innerHTML = 'Komentari';
-	komentari.href = "";
+	komentari.onclick = function () { commentsModal(restaurant); };
 
 	data.appendChild(naslov);
 	data.appendChild(tip);
@@ -55,6 +55,26 @@ function restaurantCard(restaurant) {
 	card.appendChild(data);
 	cardDiv.appendChild(card);
 
+}
+
+function detailsModal(restaurant) {
+	$('#detailsHeader').html(restaurant.name);
+	$('#detailsIndexImage').html('<img class="img-rounded" src="' + restaurant.logo + '">');
+	$('#detailsTypeIndex').html('<i>' + restaurant.type + '</i>');
+	if (restaurant.status) {
+		$('#detailsStatusIndex').html('<i>otvoren</i>');
+	} else {
+		$('#detailsStatusIndex').html('<i>zatvoren</i>');
+	}
+	$('#detailsLocationIndex').html(restaurant.location.address + '<br>' + restaurant.location.postalCode + ',' + restaurant.location.city);
+	$('#detailsIndexModal').modal('show');
+}
+
+function commentsModal(restaurant) {
+	$('#commentsHeader').html(restaurant.name + " komentari");
+
+
+	$('#commentsIndexModal').modal('show');
 }
 
 $(document).ready(function () {

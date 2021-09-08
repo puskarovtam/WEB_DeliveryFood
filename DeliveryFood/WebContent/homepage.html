@@ -36,7 +36,7 @@
                     <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdownMenuLink">
                         <a class="dropdown-item" href="#" id="allRestaurants"> Pregled svih restorana</a>
                         <div class="dropdown-divider"></div>
-                        <a class="dropdown-item" href="#" id="newRestaurant"> Dodaj novi restoran</a>
+                        <a class="dropdown-item" href="#" id="newRestaurant" onclick="addNewRestaurant()"> Dodaj novi restoran</a>
                     </div>
                 </li>
                 <li class="nav-item dropdown">
@@ -217,7 +217,7 @@
             </div>
             <div class="form-group">
                 <div class="offset-sm-4 col-sm-4">
-                    <button type="submit" class="btn btn-primary btn-block">Dodaj restoran</button>
+                    <button type="submit" class="btn btn-primary btn-block" onclick="saveNewApartment()">Dodaj restoran</button>
                 </div>
             </div>
             <div class="form-group">
@@ -306,7 +306,7 @@
     <br>
     
     <div class="container">
-        <button type="button" class="btn btn-danger" data-toggle="modal" data-target="#deleteRestaurant" onclick="deleteRestaurant()">Brisanje restorana</button>
+        <button type="button" class="btn btn-danger" data-toggle="modal" data-target="#deleteRestaurant" onclick="deleteRestaurant(restaurantID)">Brisanje restorana</button>
     </div>
     <!--BRISANJE RESTORANA-->
     <div class="modal fade" id="deleteRestaurantModal" tabindex="-1" role="dialog" aria-labelledby="deleteRestaurantLabel" aria-hidden="true">
@@ -320,7 +320,7 @@
                     Da li ste sigurni da želite da obrišete ovaj restoran?
                 </div>
                 <div class="modal-footer">
-                    <button type="button" class="btn btn-success">Da</button>
+                    <button type="button" class="btn btn-success" onclick="confirmDeleteRestaurant()">Da</button>
                     <button type="button" class="btn btn-danger" data-dismiss="modal">Ne</button>
                 </div>
             </div>
@@ -328,6 +328,22 @@
     </div>
     <br>
 
+    <!--DETALJI RESTORANA-->
+    <div class="modal fade" id="detailsRestaurantModal" tabindex="-1" role="dialog" aria-labelledby="detailsRestaurantLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="detailsRestaurantLabel"></h5>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <!--KOMENATRI RESTORANA-->
+    <div class="modal" id="commentsRestaurantModal">
+
+    </div>
     
     <!--TABELA KORISNIKA-->
     <div class="container" id="usersTableDiv">
