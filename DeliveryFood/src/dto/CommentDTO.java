@@ -1,34 +1,24 @@
-package beans;
+package dto;
 
-public class Comment {
+public class CommentDTO {
 
-	private Long id;
 	private String userCommenter;
 	private int restaurantId;
-	private String text;
+	private String comment;
 	private int rating;
 	private boolean visible;
 
-	public Comment() {
+	public CommentDTO() {
 		super();
 	}
 
-	public Comment(Long id, String userCommenter, int restaurantId, String text, int rating, boolean visible) {
+	public CommentDTO(String userCommenter, int restaurantId, String comment, int rating, boolean visible) {
 		super();
-		this.id = id;
 		this.userCommenter = userCommenter;
 		this.restaurantId = restaurantId;
-		this.text = text;
+		this.comment = comment;
 		this.rating = rating;
 		this.visible = visible;
-	}
-
-	public Long getId() {
-		return id;
-	}
-
-	public void setId(Long id) {
-		this.id = id;
 	}
 
 	public String getUserCommenter() {
@@ -47,12 +37,12 @@ public class Comment {
 		this.restaurantId = restaurantId;
 	}
 
-	public String getText() {
-		return text;
+	public String getComment() {
+		return comment;
 	}
 
-	public void setText(String text) {
-		this.text = text;
+	public void setComment(String comment) {
+		this.comment = comment;
 	}
 
 	public int getRating() {

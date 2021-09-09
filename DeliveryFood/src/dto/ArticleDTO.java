@@ -1,39 +1,26 @@
-package beans;
+package dto;
 
-public class Article {
+public class ArticleDTO {
 
-	private Long id;
 	private String name;
 	private String type;
 	private int price;
 	private int amount;
 	private String description;
 	private String image;
-	private boolean deleted;
 
-	public Article() {
+	public ArticleDTO() {
 		super();
 	}
 
-	public Article(Long id, String name, String type, int price, int amount, String description, String image,
-			boolean deleted) {
+	public ArticleDTO(String name, String type, int price, int amount, String description, String image) {
 		super();
-		this.id = id;
 		this.name = name;
 		this.type = type;
 		this.price = price;
 		this.amount = amount;
 		this.description = description;
 		this.image = image;
-		this.deleted = deleted;
-	}
-
-	public Long getId() {
-		return id;
-	}
-
-	public void setId(Long id) {
-		this.id = id;
 	}
 
 	public String getName() {
@@ -82,14 +69,6 @@ public class Article {
 
 	public void setImage(String image) {
 		this.image = image;
-	}
-
-	public boolean isDeleted() {
-		return deleted;
-	}
-
-	public void setDeleted(boolean deleted) {
-		this.deleted = deleted;
 	}
 
 }

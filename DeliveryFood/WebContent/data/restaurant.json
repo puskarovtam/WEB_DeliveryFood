@@ -10,10 +10,21 @@
 			"latitude": 10.5,
 			"longitude": 11.5
 		},
-		"logo" : "images/pizzeriaCiao.png",
+		"logo": "images/pizzeriaCiao.png",
 		"status": "true",
 		"deleted": "false",
-		"articles": [],
+		"articles": [
+			{
+				"id": "1",
+				"name": "Pizza Margarita",
+				"type": "jelo",
+				"price": "630",
+				"amount": "1",
+				"description": "Pizza Margarita se sastoji od sledecih sastojaka: sir, kecap, sampinjoni, masline",
+				"image": "images/pizzaMargarita.jpg",
+				"deleted": "false"
+			}
+		],
 		"manager": "ivona"
 	}
 ]
