@@ -36,7 +36,8 @@
                     <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdownMenuLink">
                         <a class="dropdown-item" href="#" id="allRestaurants"> Pregled svih restorana</a>
                         <div class="dropdown-divider"></div>
-                        <a class="dropdown-item" href="#" id="newRestaurant" onclick="addNewRestaurant()"> Dodaj novi restoran</a>
+                        <a class="dropdown-item" href="#" id="newRestaurant" onclick="addNewRestaurant()"> Dodaj novi
+                            restoran</a>
                     </div>
                 </li>
                 <li class="nav-item dropdown">
@@ -67,11 +68,13 @@
                                 d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8zm8-7a7 7 0 0 0-5.468 11.37C3.242 11.226 4.805 10 8 10s4.757 1.225 5.468 2.37A7 7 0 0 0 8 1z" />
                         </svg> Profil</a>
                     <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdownMenuLink">
-                        <a class="dropdown-item" href="#"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
-                                fill="currentColor" class="bi bi-shop-window" viewBox="0 0 16 16">
-                                <path
-                                    d="M2.97 1.35A1 1 0 0 1 3.73 1h8.54a1 1 0 0 1 .76.35l2.609 3.044A1.5 1.5 0 0 1 16 5.37v.255a2.375 2.375 0 0 1-4.25 1.458A2.371 2.371 0 0 1 9.875 8 2.37 2.37 0 0 1 8 7.083 2.37 2.37 0 0 1 6.125 8a2.37 2.37 0 0 1-1.875-.917A2.375 2.375 0 0 1 0 5.625V5.37a1.5 1.5 0 0 1 .361-.976l2.61-3.045zm1.78 4.275a1.375 1.375 0 0 0 2.75 0 .5.5 0 0 1 1 0 1.375 1.375 0 0 0 2.75 0 .5.5 0 0 1 1 0 1.375 1.375 0 1 0 2.75 0V5.37a.5.5 0 0 0-.12-.325L12.27 2H3.73L1.12 5.045A.5.5 0 0 0 1 5.37v.255a1.375 1.375 0 0 0 2.75 0 .5.5 0 0 1 1 0zM1.5 8.5A.5.5 0 0 1 2 9v6h12V9a.5.5 0 0 1 1 0v6h.5a.5.5 0 0 1 0 1H.5a.5.5 0 0 1 0-1H1V9a.5.5 0 0 1 .5-.5zm2 .5a.5.5 0 0 1 .5.5V13h8V9.5a.5.5 0 0 1 1 0V13a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V9.5a.5.5 0 0 1 .5-.5z" />
-                            </svg> Porudžbine</a>
+                        <a class="dropdown-item" href="#" onclick="myProfile()"><svg xmlns="http://www.w3.org/2000/svg"
+                                width="16" height="16" fill="currentColor" class="bi bi-person-circle"
+                                viewBox="0 0 16 16">
+                                <path d="M11 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0z" />
+                                <path fill-rule="evenodd"
+                                    d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8zm8-7a7 7 0 0 0-5.468 11.37C3.242 11.226 4.805 10 8 10s4.757 1.225 5.468 2.37A7 7 0 0 0 8 1z" />
+                            </svg> Moj profil</a>
                         <div class="dropdown-divider"></div>
                         <a class="dropdown-item" href="#" onclick="logout()"><svg xmlns="http://www.w3.org/2000/svg"
                                 width="16" height="16" fill="currentColor" class="bi bi-box-arrow-left"
@@ -217,7 +220,8 @@
             </div>
             <div class="form-group">
                 <div class="offset-sm-4 col-sm-4">
-                    <button type="submit" class="btn btn-primary btn-block" onclick="saveNewApartment()">Dodaj restoran</button>
+                    <button type="submit" class="btn btn-primary btn-block" onclick="saveNewApartment()">Dodaj
+                        restoran</button>
                 </div>
             </div>
             <div class="form-group">
@@ -273,8 +277,8 @@
                     <div class="form-inline">
                         <input type="text" class="form-control col-sm-6" name="postalCodeEditRestaurant"
                             id="postalCodeEditRestaurant" placeholder="npr. 21000" />
-                        <input type="text" class="form-control col-sm-6" name="cityEditRestaurant" id="cityEditRestaurant"
-                            placeholder="npr. Novi Sad" />
+                        <input type="text" class="form-control col-sm-6" name="cityEditRestaurant"
+                            id="cityEditRestaurant" placeholder="npr. Novi Sad" />
                     </div>
                     <p id="emptyLocation"></p>
                 </div>
@@ -304,17 +308,21 @@
         </form>
     </div>
     <br>
-    
+
     <div class="container">
-        <button type="button" class="btn btn-danger" data-toggle="modal" data-target="#deleteRestaurant" onclick="deleteRestaurant(restaurantID)">Brisanje restorana</button>
+        <button type="button" class="btn btn-danger" data-toggle="modal" data-target="#deleteRestaurant"
+            onclick="deleteRestaurant(restaurantID)">Brisanje restorana</button>
     </div>
     <!--BRISANJE RESTORANA-->
-    <div class="modal fade" id="deleteRestaurantModal" tabindex="-1" role="dialog" aria-labelledby="deleteRestaurantLabel" aria-hidden="true">
+    <div class="modal fade" id="deleteRestaurantModal" tabindex="-1" role="dialog"
+        aria-labelledby="deleteRestaurantLabel" aria-hidden="true">
         <div class="modal-dialog modal-dialog-centered" role="document">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h5 class="modal-title" id="deleteRestaurantLabel" style="text-align: center; font-weight: bold;  font-style: italic;">Brisanje restorana</h5>
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                    <h5 class="modal-title" id="deleteRestaurantLabel"
+                        style="text-align: center; font-weight: bold;  font-style: italic;">Brisanje restorana</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span
+                            aria-hidden="true">&times;</span></button>
                 </div>
                 <div class="modal-body">
                     Da li ste sigurni da želite da obrišete ovaj restoran?
@@ -329,7 +337,8 @@
     <br>
 
     <!--DETALJI RESTORANA-->
-    <div class="modal fade" id="detailsRestaurantModal" tabindex="-1" role="dialog" aria-labelledby="detailsRestaurantLabel" aria-hidden="true">
+    <div class="modal fade" id="detailsRestaurantModal" tabindex="-1" role="dialog"
+        aria-labelledby="detailsRestaurantLabel" aria-hidden="true">
         <div class="modal-dialog modal-dialog-centered" role="document">
             <div class="modal-content">
                 <div class="modal-header">
@@ -344,7 +353,7 @@
     <div class="modal" id="commentsRestaurantModal">
 
     </div>
-    
+
     <!--TABELA KORISNIKA-->
     <div class="container" id="usersTableDiv">
         <div class="container col-4 pull-right" style="padding-right: unset;">
@@ -369,6 +378,136 @@
         </table>
     </div>
 
+    <!--PROFIL KORISNIKA-->
+    <div class="container" id="userProfile">
+        <div class="d-flex justify-content-center align-items-center min-vh-100">
+            <div class="card">
+                <div class="card-body">
+                    <div class="d-flex flex-column align-items-center text-center">
+                        <img src="images/profile.png" alt="Profilna slika" class="rounded-circle" width="150">
+                        <div class="mt-3">
+                            <h4 id="profileNameSurname"></h4>
+                            <p class="text-secondary mb-1" id="profileUsername"><i></i></p>
+                            <br>
+                            <div class="row">
+                                <div class="col-sm-6">
+                                    <p>Datum rodjenja: </p>
+                                </div>
+                                <div class="col-sm-6">
+                                    <p class="text-muted font-size-sm" id="profileDate"></p>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-sm-6">
+                                    <p>Pol: </p>
+                                </div>
+                                <div class="col-sm-6">
+                                    <p class="text-muted font-size-sm" id="profileGender"></p>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-sm-6">
+                                    <p>Uloga: </p>
+                                </div>
+                                <div class="col-sm-6">
+                                    <p class="text-muted font-size-sm" id="profileRole"></p>
+                                </div>
+                            </div>
+                        </div>
+                        <button type="button" class="btn btn-primary" onclick="editProfile()">Izmeni podatke</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--IZMENA PROFILA KORISNIKA-->
+    <div class="container" id="editUserProfile">
+        <div class="d-flex justify-content-center align-items-center min-vh-100">
+            <div class="card">
+                <div class="card-body">
+                    <div class="d-flex flex-column align-items-center text-center">
+                        <img src="images/profile.png" alt="Profilna slika" class="rounded-circle" width="150">
+                        <div class="mt-3">
+                            <form id="formEditUser">
+                                <div class="form-group row">
+                                    <div class="col-sm-6">
+                                    </div>
+                                    <div class="col-sm-6">
+                                        <p id="error"></p>
+                                        <p id="success"></p>
+                                    </div>
+                                    <div class="col-sm-6">
+                                        <p>Ime: </p>
+                                    </div>
+                                    <div class="col-sm-6">
+                                        <input type="text" class="form-control" name="editProfileName"
+                                            id="editProfileName" />
+                                        <p id="emptyEditName"></p>
+                                    </div>
+                                </div>
+                                <div class="form-group row">
+                                    <div class="col-sm-6">
+                                        <p>Prezime: </p>
+                                    </div>
+                                    <div class="col-sm-6">
+                                        <input type="text" class="form-control" name="editProfileSurname"
+                                            id="editProfileSurname" />
+                                        <p id="emptyEditSurname"></p>
+                                    </div>
+                                </div>
+                                <div class="form-group row">
+                                    <div class="col-sm-6">
+                                        <p>Username: </p>
+                                    </div>
+                                    <div class="col-sm-6">
+                                        <input type="text" class="form-control-plaintext" name="editProfileUsername"
+                                            id="editProfileUsername" readonly />
+                                    </div>
+                                </div>
+                                <div class="form-group row">
+                                    <div class="col-sm-6">
+                                        <p>Password: </p>
+                                    </div>
+                                    <div class="col-sm-6">
+                                        <input type="password" class="form-control" name="editProfilePassword"
+                                            id="editProfilePassword" />
+                                        <p id="emptyEditPassword"></p>
+                                        <p id="lengthEditPassword"></p>
+                                    </div>
+                                </div>
+                                <div class="form-group row">
+                                    <div class="col-sm-6">
+                                        <p>Datum rođenja: </p>
+                                    </div>
+                                    <div class="col-sm-6">
+                                        <input type="date" class="form-control" name="editProfileDate"
+                                            id="editProfileDate" />
+                                        <p id="emptyEditDate"></p>
+                                    </div>
+                                </div>
+                                <div class="form-group row">
+                                    <div class="col-sm-6">
+                                        <p>Pol: </p>
+                                    </div>
+                                    <div class="col-sm-6">
+                                        <select class="form-control" name="editProfileGender" id="editProfileGender">
+                                            <option value="">Izaberite pol</option>
+                                            <option value="zenski">ženski</option>
+                                            <option value="muski">muški</option>
+                                        </select>
+                                        <p id="emptyEditGender"></p>
+                                    </div>
+                                </div>
+                                <button type="submit" class="btn btn-primary" onclick="saveEditChange()">Sačuvaj
+                                    podatke</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 
     <!--SCRIPTS-->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>

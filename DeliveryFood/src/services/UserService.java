@@ -1,6 +1,7 @@
 package services;
 
 import java.util.ArrayList;
+import java.util.HashMap;
 
 import javax.annotation.PostConstruct;
 import javax.servlet.ServletContext;
@@ -8,7 +9,9 @@ import javax.servlet.http.HttpServletRequest;
 import javax.ws.rs.Consumes;
 import javax.ws.rs.GET;
 import javax.ws.rs.POST;
+import javax.ws.rs.PUT;
 import javax.ws.rs.Path;
+import javax.ws.rs.PathParam;
 import javax.ws.rs.Produces;
 import javax.ws.rs.core.Context;
 import javax.ws.rs.core.MediaType;
@@ -95,6 +98,30 @@ public class UserService {
 		}
 
 		return all;
+	}
+
+	@PUT
+	@Path("/edit/{username}/{name}/{surname}/{password}/{dateOfBirth}/{gender}")
+	@Consumes(MediaType.APPLICATION_JSON)
+	@Produces(MediaType.APPLICATION_JSON)
+	public Response editUser(@PathParam("username") String username, @PathParam("name") String name,
+			@PathParam("surname") String surname, @PathParam("password") String password,
+			@PathParam("dateOfBirth") String dateOfBirth, @PathParam("gender") String gender) {
+		UserDAO users = (UserDAO) ctx.getAttribute("userDAO");
+		User editUser = users.findUserByUsername(username);
+
+		HashMap<String, User> korisnici = users.getUsers();
+		editUser.setName(name);
+		editUser.setSurname(surname);
+		editUser.setPassword(password);
+		editUser.setDateOfBirth(dateOfBirth);
+		editUser.setGender(gender);
+		korisnici.put(editUser.getUsername(), editUser);
+		users.setUsers(korisnici);
+		ctx.setAttribute("userDAO", users);
+		users.saveUsers();
+
+		return Response.status(200).build();
 	}
 
 }

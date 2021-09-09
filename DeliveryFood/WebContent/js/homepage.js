@@ -2,6 +2,7 @@ $(document).ready(function() {
 	$('#noviRestoran').hide();	
 	$('#editRestaurant').hide();
 	$('#usersTableDiv').hide();
+	$('#userProfile').hide();
 	$('#logovan').show();
 	
 	$("#userInput").on("keyup", function() {
