@@ -12,6 +12,7 @@ public class Restaurant {
 	private boolean status = true;
 	private boolean deleted = false;
 	private ArrayList<Article> articles = new ArrayList<Article>();
+	private ArrayList<Order> orders = new ArrayList<Order>();
 	private String manager;
 	private int review;
 
@@ -19,7 +20,7 @@ public class Restaurant {
 	}
 
 	public Restaurant(Long id, String name, String type, Location location, String logo, boolean status,
-			boolean deleted, ArrayList<Article> articles, String manager, int review) {
+			boolean deleted, ArrayList<Article> articles, ArrayList<Order> orders, String manager, int review) {
 		super();
 		this.id = id;
 		this.name = name;
@@ -29,6 +30,7 @@ public class Restaurant {
 		this.status = status;
 		this.deleted = deleted;
 		this.articles = articles;
+		this.orders = orders;
 		this.manager = manager;
 		this.review = review;
 	}
@@ -95,6 +97,14 @@ public class Restaurant {
 
 	public void setArticles(ArrayList<Article> articles) {
 		this.articles = articles;
+	}
+
+	public ArrayList<Order> getOrders() {
+		return orders;
+	}
+
+	public void setOrders(ArrayList<Order> orders) {
+		this.orders = orders;
 	}
 
 	public String getManager() {

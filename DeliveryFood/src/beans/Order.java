@@ -1,28 +1,62 @@
 package beans;
 
-import java.util.Date;
+import java.util.ArrayList;
 
 public class Order {
 
-	private int id;
-	private Date date;
+	private Long id;
+	private ArrayList<Article> articles = new ArrayList<Article>();
+	private Long restaurantId;
+	private String date;
 	private int price;
-	private int buyerId;
+	private String buyerUsername;
 	private String status;
 
-	public int getId() {
+	public Order() {
+		super();
+	}
+
+	public Order(Long id, ArrayList<Article> articles, Long restaurantId, String date, int price, String buyerUsername,
+			String status) {
+		super();
+		this.id = id;
+		this.articles = articles;
+		this.restaurantId = restaurantId;
+		this.date = date;
+		this.price = price;
+		this.buyerUsername = buyerUsername;
+		this.status = status;
+	}
+
+	public Long getId() {
 		return id;
 	}
 
-	public void setId(int id) {
+	public void setId(Long id) {
 		this.id = id;
 	}
 
-	public Date getDate() {
+	public ArrayList<Article> getArticles() {
+		return articles;
+	}
+
+	public void setArticles(ArrayList<Article> articles) {
+		this.articles = articles;
+	}
+
+	public Long getRestaurantId() {
+		return restaurantId;
+	}
+
+	public void setRestaurantId(Long restaurantId) {
+		this.restaurantId = restaurantId;
+	}
+
+	public String getDate() {
 		return date;
 	}
 
-	public void setDate(Date date) {
+	public void setDate(String date) {
 		this.date = date;
 	}
 
@@ -34,12 +68,12 @@ public class Order {
 		this.price = price;
 	}
 
-	public int getBuyerId() {
-		return buyerId;
+	public String getBuyerUsername() {
+		return buyerUsername;
 	}
 
-	public void setBuyerId(int buyerId) {
-		this.buyerId = buyerId;
+	public void setBuyerUsername(String buyerUsername) {
+		this.buyerUsername = buyerUsername;
 	}
 
 	public String getStatus() {

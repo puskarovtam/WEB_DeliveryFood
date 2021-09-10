@@ -8,6 +8,7 @@ $(document).ready(function() {
 		let confirm = $('#confirmRegister').val();
 		let name = $('#nameRegister').val();
 		let surname = $('#surnameRegister').val();
+		let date = $('#dateRegister').val();
 		let gender = $('#genderRegister').val();
 		let role = 'BUYER';
 
@@ -89,6 +90,13 @@ $(document).ready(function() {
 			return;
 		}
 
+		if (!date) {
+			$('#emptyDate').text('Datum rođenja je obavezno polje.');
+			$('#emptyDate').css({ "color": "red", "font-size": "12px", "text-align": "center" });
+			$('#emptyDate').show().delay(3000).fadeOut();
+			return;
+		}
+
 		if (!gender) {
 			$('#emptyGender').text('Izaberite Vaš pol.');
 			$('#emptyGender').css({ "color": "red", "font-size": "12px", "text-align": "center" });
@@ -106,6 +114,7 @@ $(document).ready(function() {
 				"password": password,
 				"name": name,
 				"surname": surname,
+				"date": date,
 				"gender": gender,
 				"role": role
 			}),
