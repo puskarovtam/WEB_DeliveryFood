@@ -3,8 +3,6 @@ let cardDiv;
 
 function restaurantCard(restaurant) {
 
-	cardDiv = document.getElementById('restaurantCardDiv');
-
 	const card = document.createElement('div');
 	card.className = "card";
 	card.style = "width: 18rem";
@@ -79,7 +77,7 @@ function commentsModal(restaurant) {
 
 $(document).ready(function () {
 	$('#logovan').hide();
-
+	cardDiv = document.getElementById('restaurantCardDiv');
 	$.ajax({
 		type: 'get',
 		url: 'rest/restaurant/allOpen',
