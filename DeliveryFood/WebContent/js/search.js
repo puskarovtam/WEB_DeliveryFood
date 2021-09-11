@@ -77,6 +77,15 @@ function restaurantCard(restaurant) {
     cardDiv.appendChild(card);
 }
 
+function clearFilters() {
+    document.getElementById('nameIndexSearch').value = '';
+    document.getElementById('typeIndexSearch').value = '';
+    document.getElementById('locationIndexSearch').value = '';
+    document.getElementById('minReviewIndexSearch').value = '';
+    document.getElementById('maxReviewIndexSearch').value = '';
+    search();
+}
+
 class RestaurantSearchDTO {
     constructor(name, type, city, minReview, maxReview) {
         this.name = name;

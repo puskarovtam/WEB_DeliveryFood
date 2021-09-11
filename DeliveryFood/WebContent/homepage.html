@@ -34,22 +34,22 @@
                     <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button"
                         data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> Restoran</a>
                     <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdownMenuLink">
-                        <a class="dropdown-item" href="#" id="allRestaurants"> Pregled svih restorana</a>
+                        <a class="dropdown-item" href="#" id="allRestaurants" onclick="getAllRestaurants()"> Pregled restorana</a>
                         <div class="dropdown-divider"></div>
                         <a class="dropdown-item" href="#" id="newRestaurant" onclick="addNewRestaurant()"> Dodaj novi
                             restoran</a>
                     </div>
                 </li>
-                <li class="nav-item dropdown">
+                <li class="nav-item dropdown" id="orders">
                     <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button"
                         data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> Porudžbine</a>
                     <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdownMenuLink">
-                        <a class="dropdown-item" href="#" id="allOrders"> Pregled porudžbina</a>
+                        <a class="dropdown-item" href="#" id="allOrders" onclick="getAllOrders()"> Pregled porudžbina</a>
                         <div class="dropdown-divider"></div>
                         <a class="dropdown-item" href="#" id="newOrder"> Kreiraj novu porudžbinu</a>
                     </div>
                 </li>
-                <li class="nav-item">
+                <li class="nav-item"  id="allUsers">
                     <a class="nav-link" href="#" onclick="getAllUsers()"><svg xmlns="http://www.w3.org/2000/svg"
                             width="16" height="16" fill="currentColor" class="bi bi-people" viewBox="0 0 16 16">
                             <path
@@ -86,13 +86,13 @@
                             </svg> Logout</a>
                     </div>
                 </li>
-                <li class="nav-item">
+               <!-- <li class="nav-item">
                     <a class="nav-link" href="#"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
                             fill="currentColor" class="bi bi-cart4" viewBox="0 0 16 16">
                             <path
                                 d="M0 2.5A.5.5 0 0 1 .5 2H2a.5.5 0 0 1 .485.379L2.89 4H14.5a.5.5 0 0 1 .485.621l-1.5 6A.5.5 0 0 1 13 11H4a.5.5 0 0 1-.485-.379L1.61 3H.5a.5.5 0 0 1-.5-.5zM3.14 5l.5 2H5V5H3.14zM6 5v2h2V5H6zm3 0v2h2V5H9zm3 0v2h1.36l.5-2H12zm1.11 3H12v2h.61l.5-2zM11 8H9v2h2V8zM8 8H6v2h2V8zM5 8H3.89l.5 2H5V8zm0 5a1 1 0 1 0 0 2 1 1 0 0 0 0-2zm-2 1a2 2 0 1 1 4 0 2 2 0 0 1-4 0zm9-1a1 1 0 1 0 0 2 1 1 0 0 0 0-2zm-2 1a2 2 0 1 1 4 0 2 2 0 0 1-4 0z" />
                         </svg> Korpa</a>
-                </li>
+                </li>-->
             </ul>
         </div>
     </nav>
@@ -145,16 +145,6 @@
     <br>
     <!--PRIKAZ SVIH RESTORANA-->
     <div class="container" id="restaurantCardDiv">
-        <div class="card" style="width: 18rem;">
-            <img src="images/pizzeriaCiao.png" class="card-img-top" alt="slika">
-            <div class="card-body">
-                <h5 class="card-title"><b>Pizzeria Ciao</b></h5>
-                <h6 class="card-subtitle mb-2 text-muted"><i>italijanski</i></h6>
-                <p class="card-text">Braće Jovandić 1, <br> 21000 Novi Sad</p>
-                <a href="#" class="card-link btn btn-primary">Detalji</a>
-                <a href="#" class="card-link btn btn-primary">Komentari</a>
-            </div>
-        </div>
     </div>
     <br>
     <!--NOVI RESTORAN-->
@@ -220,7 +210,7 @@
             </div>
             <div class="form-group">
                 <div class="offset-sm-4 col-sm-4">
-                    <button type="submit" class="btn btn-primary btn-block" onclick="saveNewApartment()">Dodaj
+                    <button type="submit" class="btn btn-primary btn-block" onclick="saveNewRestaurant()">Dodaj
                         restoran</button>
                 </div>
             </div>
@@ -296,7 +286,7 @@
             </div>
             <div class="form-group">
                 <div class="offset-sm-4 col-sm-4">
-                    <button type="submit" class="btn btn-primary btn-block">Izmeni restoran</button>
+                    <button type="submit" class="btn btn-primary btn-block" onclick="updateRestaurant()">Izmeni restoran</button>
                 </div>
             </div>
             <div class="form-group">
@@ -309,10 +299,6 @@
     </div>
     <br>
 
-    <div class="container">
-        <button type="button" class="btn btn-danger" data-toggle="modal" data-target="#deleteRestaurant"
-            onclick="deleteRestaurant(restaurantID)">Brisanje restorana</button>
-    </div>
     <!--BRISANJE RESTORANA-->
     <div class="modal fade" id="deleteRestaurantModal" tabindex="-1" role="dialog"
         aria-labelledby="deleteRestaurantLabel" aria-hidden="true">
@@ -337,14 +323,34 @@
     <br>
 
     <!--DETALJI RESTORANA-->
-    <div class="modal fade" id="detailsRestaurantModal" tabindex="-1" role="dialog"
-        aria-labelledby="detailsRestaurantLabel" aria-hidden="true">
-        <div class="modal-dialog modal-dialog-centered" role="document">
+    <div class="modal fade" id="detailsRestaurantModal" role="dialog">
+        <div class="modal-dialog modal-dialog-centered">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h5 class="modal-title" id="detailsRestaurantLabel"></h5>
+                    <h3 class="modal-title" style="text-align: center; font-weight: bold;  font-style: italic;"
+                        id="detailsRestaurantHeader"></h3>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span
+                            aria-hidden="true">&times;</span></button>
                 </div>
-
+                <div class="modal-body">
+                    <div class="row">
+                        <div class="col-sm-4" style="padding-left: 0px;" id="detailsRestaurantImage">
+                        </div>
+                        <div class="col-sm-8" style="padding-left: 40px; padding-right: 0px;">
+                            <label><b>Tip restorana:</b></label>
+                            <p id="detailsRestaurantType"></p>
+                            <label><b>Status restorana:</b></label>
+                            <p id="detailsRestaurantStatus"></p>
+                            <label><b>Lokacija restorana:</b></label>
+                            <h6 id="detailsRestaurantLocation"></h6>
+                            <br>
+                            <button type="button" class="btn btn-primary">Lista artikala</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer" id="detailsRestaurantFooter">
+                    <button type="button" class="btn btn-info" data-dismiss="modal">Zatvori</button>
+                </div>
             </div>
         </div>
     </div>
@@ -509,6 +515,9 @@
         </div>
     </div>
 
+    <div class="container" id="orderCardDiv">
+    </div>
+
     <!--SCRIPTS-->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <!--  <script src="https://code.jquery.com/jquery-3.3.1.min.js"
@@ -523,6 +532,7 @@
     <script src="js/users.js"></script>
     <script src="js/search.js"></script>
     <script src="js/restaurant.js"></script>
+    <script src="js/order.js"></script>
 </body>
 
 </html>

@@ -14,7 +14,7 @@ function addNewRestaurant() {
     });
 }
 
-function saveNewApartment() {
+function saveNewRestaurant() {
     let name = $('#nameNewRestaurant').val();
     let type = $('#typeNewRestaurant').val();
     let address = $('#addressNewRestaurant').val();
@@ -142,27 +142,6 @@ function updateRestaurant() {
             $('#error').show().delay(3000).fadeOut();
         }
     });
-}
-
-function deleteRestaurant(restaurantID) {
-    $("#deleteRestaurantModal").modal("show");
-}
-
-function confirmDeleteRestaurant() {
-    let restID = restaurantID;
-    $.ajax({
-        type: 'delete',
-        url: 'rest/restaurant/delete/' + restID,
-        contentType: 'application/json',
-        success: function () {
-            $("#deleteRestaurantModal").modal("hide");
-            window.location = "./homepage.html";
-        }
-    });
-}
-
-function detailsRestaurant(){
-    
 }
 
 /*  ==========================================

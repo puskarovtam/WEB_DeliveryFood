@@ -10,7 +10,7 @@ public class Restaurant {
 	private Location location;
 	private String logo;
 	private boolean status = true;
-	private boolean deleted = false;
+	private boolean deleted;
 	private ArrayList<Article> articles = new ArrayList<Article>();
 	private ArrayList<Order> orders = new ArrayList<Order>();
 	private String manager;
